@@ -4,41 +4,49 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: black;
 }
 
+@keyframes rotation{
+    0%{transform: translate(8px, 0px);}
+    25%{transform: translate(0px, -8px);}
+    50%{transform: translate(-8px, 0px);}
+    75%{transform: translate(0px, 8px);}
+    100%{transform: translate(8px, 0px);}
+}
 .main_container{
+
     width: 400px;
     height: 400px;
-    border-radius: 50%;
-    background-color: white;   
+    border-radius: 50%;  
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    background-color: black;
+    /* background: conic-gradient(#624FB0,#8d7fc6); */
     overflow: hidden;
+     /* border: 5px solid yellow; */
 }
 
-/* .inside_container{
+.behind-container1{
     position: absolute;
- 
     width: 400px;
     height: 400px;
     border-radius: 50%;
-    background-color: white;
-}  */
+    background: repeating-conic-gradient(
+  red 0%,
+  yellow 15%,
+  red 33%
+);  
+    animation: rotation 1s linear infinite;
 
-.section1{
-    background-color: orangered;
 }
 
-.section2{
-    background-color: blue;
+.behind-container2{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-color: blue;   
 }
 
-.section3{
-    background-color: green;
-}
 
-.section4{
-    background-color: purple;
-}
